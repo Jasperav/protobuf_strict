@@ -6,6 +6,16 @@ pub fn get_uuids() -> [&'static str; 3] {
     ["uuid", "repeated_uuids", "also_uuid"]
 }
 
+pub const fn protos() -> [&'static str; 5] {
+    [
+        "currency",
+        "gender",
+        "order",
+        "size",
+        "store"
+    ]
+}
+
 pub fn write_protos(to_dir: &Path) {
     let proto_dir = to_dir.join("protos");
 
@@ -33,7 +43,5 @@ pub fn write_protos(to_dir: &Path) {
 #[cfg(test)]
 mod test {
     #[test]
-    fn test_compile() {
-
-    }
+    fn test_compile() {}
 }
